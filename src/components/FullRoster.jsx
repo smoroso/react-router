@@ -1,6 +1,6 @@
-import React from 'react'
-import PlayerAPI from '../fake-api'
-import { Link } from 'react-router-dom'
+import React from "react";
+import PlayerAPI from "../fake-api";
+import { Link } from "react-router-dom";
 
 // The FullRoster iterates over all of the players and creates
 // a link to their profile page.
@@ -16,6 +16,6 @@ const FullRoster = () => (
       }
     </ul>
   </div>
-)
+);
 
-export default FullRoster
+export default FullRoster;

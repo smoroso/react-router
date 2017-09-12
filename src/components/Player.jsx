@@ -1,6 +1,7 @@
-import React from 'react'
-import PlayerAPI from '../fake-api'
-import { Link } from 'react-router-dom'
+import React from "react";
+import PropTypes from "prop-types";
+import PlayerAPI from "../fake-api";
+import { Link } from "react-router-dom";
 
 // The Player looks up the player using the number parsed from
 // the URL's pathname. If no player is found with the given
@@ -8,9 +9,9 @@ import { Link } from 'react-router-dom'
 const Player = (props) => {
   const player = PlayerAPI.get(
     parseInt(props.match.params.number, 10)
-  )
+  );
   if (!player) {
-    return <div>Sorry, but the player was not found</div>
+    return <div>Sorry, but the player was not found</div>;
   }
   return (
     <div>
@@ -18,7 +19,11 @@ const Player = (props) => {
       <h2>Position: {player.position}</h2>
       <Link to='/roster'>Back</Link>
     </div>
-  )
-}
+  );
+};
 
-export default Player
+Player.propTypes = {
+  match: PropTypes.string.isRequired,
+};
+
+export default Player;

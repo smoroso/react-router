@@ -1,0 +1,33 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "no-console": "off",
+    "quotes": ["error", "double", {"allowTemplateLiterals": true}],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "only-multiline"],
+    "max-len": ["error", 120],
+    "key-spacing": ["error"],
+    "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+    "react/jsx-filename-extension": "error",
+    "react/jsx-uses-react": "error",
+    "react/react-in-jsx-scope": "error",
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "error"
+  }
+}
