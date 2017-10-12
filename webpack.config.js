@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './src/App.jsx',
+  entry: "./src/App.jsx",
   output: {
-    path:'/',
-    filename: 'dist/application.js',
+    path:"/",
+    filename: "dist/application.js",
   },
   devServer: {
     inline: true,
@@ -14,10 +14,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        loader: "babel-loader"
       }
     ]
   }

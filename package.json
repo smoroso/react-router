@@ -9,24 +9,28 @@
     "build-css": "node-sass --include-path scss src/application.scss dist/application.css",
     "order-css": "csscomb src && csscomb dist",
     "watch-css": "nodemon -e scss -x npm run build-css",
-    "lint": "./node_modules/.bin/eslint --ext js,jsx src"
+    "lint": "./node_modules/.bin/eslint --ext js,jsx src",
+    "test": "jest"
   },
   "author": "Stephane Moroso",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "csscomb": "^4.2.0",
     "eslint": "^4.6.1",
     "eslint-plugin-react": "^7.3.0",
+    "jest": "^21.2.1",
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.7.1"
   }
