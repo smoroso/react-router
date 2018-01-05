@@ -1,10 +1,10 @@
 Simple example using React-Router-Dom for Client-side Routing of a React SPA
 
-#Installing
+# Installing
 `npm install`
 
-#Running
+# Running
 `npm start`
 
-#Testing
+# Testing
 `npm test`
