@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ShowMore extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class ShowMore extends React.Component {
 }
 
 ShowMore.propTypes = {
-  limit: React.PropTypes.number
+  limit: PropTypes.number
 }
 
 ShowMore.defaultProps = {

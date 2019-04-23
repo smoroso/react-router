@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 // the URL's pathname. If no player is found with the given
 // number, then a "player not found" message is displayed.
 const Player = (props) => {
+  debugger
   const player = PlayerAPI.get(
     parseInt(props.match.params.number, 10)
   );
@@ -23,7 +24,11 @@ const Player = (props) => {
 };
 
 Player.propTypes = {
-  match: PropTypes.string.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      number: PropTypes.string.isRequired
+    })
+  })
 };
 
 export default Player;

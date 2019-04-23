@@ -1,8 +1,11 @@
+const path = require("path");
+
 module.exports = {
   entry: "./src/App.jsx",
   output: {
-    path:"/",
-    filename: "dist/application.js",
+    path: path.resolve(__dirname, "dist/"),
+    filename: "application.js",
+    publicPath: "/"
   },
   devServer: {
     inline: true,
@@ -10,11 +13,13 @@ module.exports = {
     historyApiFallback: true
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        test: /.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        use: {
+          loader: "babel-loader",
+        }
       }
     ]
   }
