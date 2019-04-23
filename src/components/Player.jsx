@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 // the URL's pathname. If no player is found with the given
 // number, then a "player not found" message is displayed.
 const Player = (props) => {
-  debugger
   const player = PlayerAPI.get(
     parseInt(props.match.params.number, 10)
   );

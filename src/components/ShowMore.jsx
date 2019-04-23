@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class ShowMore extends React.Component {
   constructor(props) {
@@ -7,10 +7,10 @@ class ShowMore extends React.Component {
 
     this.state = {
       limit: props.limit
-    }
+    };
 
     this.showMore = this.showMore.bind(this);
-  };
+  }
 
   showMore() {
     //option1
@@ -18,10 +18,10 @@ class ShowMore extends React.Component {
     //this.setState({limit: newLimit});
 
     //option2
-    this.setState((prevState, props) => {
+    this.setState((prevState) => {
       return { limit: prevState.limit + 5 };
     });
-  };
+  }
 
   render() {
     return (
@@ -35,10 +35,10 @@ class ShowMore extends React.Component {
 
 ShowMore.propTypes = {
   limit: PropTypes.number
-}
+};
 
 ShowMore.defaultProps = {
   limit: 10
-}
+};
 
 export default ShowMore;
